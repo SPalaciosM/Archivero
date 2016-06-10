@@ -5,10 +5,7 @@
  */
 package tecnm.cmmi;
 
-/**
- *
- * @author cdcarlos
- */
+import tecnm.cmmi.agregar.Agregar;
 public class Login extends javax.swing.JFrame {
 
 	/**
@@ -27,21 +24,42 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnAdd = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnAdd.setText("Agregar");
+        btnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnAdd)
+                .addContainerGap(319, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(266, Short.MAX_VALUE)
+                .addComponent(btnAdd)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
+        Agregar add = new Agregar();
+        add.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAddMouseClicked
 
 	/**
 	 * @param args the command line arguments
@@ -79,5 +97,6 @@ public class Login extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     // End of variables declaration//GEN-END:variables
 }
